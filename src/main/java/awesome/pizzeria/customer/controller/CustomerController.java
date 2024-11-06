@@ -25,7 +25,11 @@ public class CustomerController {
 
     @GetMapping("/{orderId}")
     public ResponseEntity<OrderResponseDTO> checkOrder(@PathVariable String orderId){
-        return ResponseEntity.ok(customerService.checkOrderStatus(orderId));
+        try {
+            return ResponseEntity.ok(customerService.checkOrderStatus(orderId));
+        }catch(IllegalArgumentException exc){
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }
