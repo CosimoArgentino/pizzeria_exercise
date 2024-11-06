@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/customer/order")
 public class CustomerController {
+    //TODO logging
 
     CustomerService customerService;
 
@@ -24,6 +25,7 @@ public class CustomerController {
      */
     @PostMapping
     public ResponseEntity<OrderResponseDTO> createOrder(@RequestBody OrderRequestDTO orderRequestDTO){
+        //TODO validation (pizza types... and right message error)
         OrderResponseDTO orderResponseDTO = customerService.createOrder(orderRequestDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(orderResponseDTO);
     }

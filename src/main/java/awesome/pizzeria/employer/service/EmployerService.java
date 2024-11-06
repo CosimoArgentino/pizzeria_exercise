@@ -21,16 +21,23 @@ public class EmployerService {
     }
 
     public OrderDTO getNextAvailableOrder(){
-        String nextOrderId = queueRedisTemplate.opsForList().rightPop(ORDER_QUEUE_KEY);  // Gets the oldest order ID
-        if (nextOrderId != null) {
+        while (true) {
+            String nextOrderId = queueRedisTemplate.opsForList().rightPop(ORDER_QUEUE_KEY);
+            if (nextOrderId == null) {
+                return null;
+            }
+
             Order order = orderRedisTemplate.opsForValue().get(nextOrderId);
-            if (order != null && order.getOrderStatus() == OrderStatus.NEW) {
+            if (order == null) {
+                continue;
+            }
+
+            if (order.getOrderStatus() == OrderStatus.NEW) {
                 order.setOrderStatus(OrderStatus.IN_PROGRESS);
                 orderRedisTemplate.opsForValue().set(nextOrderId, order);
                 return new OrderDTO(order.getOrderId(), order.getItems(), order.getOrderStatus());
             }
         }
-        return null;
     }
 
     public void updateOrderStatus(String orderId, OrderStatus orderStatus){
