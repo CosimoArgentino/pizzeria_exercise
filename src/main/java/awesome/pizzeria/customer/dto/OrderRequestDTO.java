@@ -1,4 +1,4 @@
-package awesome.pizzeria.dto;
+package awesome.pizzeria.customer.dto;
 
 import awesome.pizzeria.status.Pizza;
 

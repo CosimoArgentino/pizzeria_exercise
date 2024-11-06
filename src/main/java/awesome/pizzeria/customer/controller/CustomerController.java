@@ -1,7 +1,7 @@
 package awesome.pizzeria.customer.controller;
 
-import awesome.pizzeria.dto.OrderRequestDTO;
-import awesome.pizzeria.dto.OrderResponseDTO;
+import awesome.pizzeria.customer.dto.OrderRequestDTO;
+import awesome.pizzeria.customer.dto.OrderResponseDTO;
 import awesome.pizzeria.customer.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

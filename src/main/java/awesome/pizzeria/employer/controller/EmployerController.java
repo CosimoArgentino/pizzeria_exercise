@@ -1,6 +1,6 @@
 package awesome.pizzeria.employer.controller;
 
-import awesome.pizzeria.dto.OrderDTO;
+import awesome.pizzeria.employer.dto.OrderDTO;
 import awesome.pizzeria.employer.controller.service.EmployerService;
 import awesome.pizzeria.status.OrderStatus;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.NoSuchElementException;
 
-@RestController("api/employer/order")
+@RestController
+@RequestMapping("api/employer/order")
 public class EmployerController {
 
     private final EmployerService employerService;

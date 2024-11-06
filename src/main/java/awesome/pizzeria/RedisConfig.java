@@ -15,11 +15,4 @@ public class RedisConfig {
         template.setConnectionFactory(connectionFactory);
         return template;
     }
-
-    @Bean
-    public RedisTemplate<String, String> stringRedisTemplate(RedisConnectionFactory connectionFactory) {
-        RedisTemplate<String, String> template = new RedisTemplate<>();
-        template.setConnectionFactory(connectionFactory);
-        return template;
-    }
 }

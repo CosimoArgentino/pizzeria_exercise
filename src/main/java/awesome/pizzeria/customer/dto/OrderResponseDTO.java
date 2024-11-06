@@ -1,18 +1,13 @@
-package awesome.pizzeria.dto;
+package awesome.pizzeria.customer.dto;
 
 import awesome.pizzeria.status.OrderStatus;
-import awesome.pizzeria.status.Pizza;
 
-import java.util.List;
-
-public class OrderDTO {
+public class OrderResponseDTO {
     private String orderId;
-    private List<Pizza> items;
     private OrderStatus orderStatus;
 
-    public OrderDTO(String orderId, List<Pizza> items, OrderStatus orderStatus) {
+    public OrderResponseDTO(String orderId, OrderStatus orderStatus) {
         this.orderId = orderId;
-        this.items = items;
         this.orderStatus = orderStatus;
     }
 
@@ -31,12 +26,5 @@ public class OrderDTO {
     public void setOrderStatus(OrderStatus orderStatus) {
         this.orderStatus = orderStatus;
     }
-
-    public List<Pizza> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Pizza> items) {
-        this.items = items;
-    }
 }
+

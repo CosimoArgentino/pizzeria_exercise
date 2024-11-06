@@ -1,6 +1,6 @@
 package awesome.pizzeria.employer.controller.service;
 
-import awesome.pizzeria.dto.OrderDTO;
+import awesome.pizzeria.employer.dto.OrderDTO;
 import awesome.pizzeria.model.Order;
 import awesome.pizzeria.status.OrderStatus;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -27,7 +27,7 @@ public class EmployerService {
             if (order != null && order.getOrderStatus() == OrderStatus.NEW) {
                 order.setOrderStatus(OrderStatus.IN_PROGRESS);
                 orderRedisTemplate.opsForValue().set(nextOrderId, order);
-                return new OrderDTO(order.getUuid(), order.getItems(), order.getOrderStatus());
+                return new OrderDTO(order.getOrderId(), order.getItems(), order.getOrderStatus());
             }
         }
         return null;

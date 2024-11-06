@@ -5,6 +5,9 @@
 *.log
 
 .idea
+HELP.md
+mvnw
+mvnw.cmd
 
 # BlueJ files
 *.ctxt
