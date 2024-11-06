@@ -1,8 +1,7 @@
-package awesome.pizzeria;
+package awesome.pizzeria.customer.service;
 
 import awesome.pizzeria.customer.dto.OrderRequestDTO;
 import awesome.pizzeria.customer.dto.OrderResponseDTO;
-import awesome.pizzeria.customer.service.CustomerService;
 import awesome.pizzeria.model.Order;
 import awesome.pizzeria.status.OrderStatus;
 import awesome.pizzeria.status.Pizza;

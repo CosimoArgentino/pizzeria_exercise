@@ -1,6 +1,5 @@
-package awesome.pizzeria;
+package awesome.pizzeria.customer.controller;
 
-import awesome.pizzeria.customer.controller.CustomerController;
 import awesome.pizzeria.customer.dto.OrderRequestDTO;
 import awesome.pizzeria.customer.dto.OrderResponseDTO;
 import awesome.pizzeria.customer.service.CustomerService;

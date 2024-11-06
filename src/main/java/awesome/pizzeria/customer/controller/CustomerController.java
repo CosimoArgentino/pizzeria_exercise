@@ -17,12 +17,22 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
+    /**
+     *
+     * @param orderRequestDTO
+     * @return
+     */
     @PostMapping
     public ResponseEntity<OrderResponseDTO> createOrder(@RequestBody OrderRequestDTO orderRequestDTO){
         OrderResponseDTO orderResponseDTO = customerService.createOrder(orderRequestDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(orderResponseDTO);
     }
 
+    /**
+     *
+     * @param orderId
+     * @return
+     */
     @GetMapping("/{orderId}")
     public ResponseEntity<OrderResponseDTO> checkOrder(@PathVariable String orderId){
         try {

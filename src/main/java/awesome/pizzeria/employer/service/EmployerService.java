@@ -1,4 +1,4 @@
-package awesome.pizzeria.employer.controller.service;
+package awesome.pizzeria.employer.service;
 
 import awesome.pizzeria.employer.dto.OrderDTO;
 import awesome.pizzeria.model.Order;

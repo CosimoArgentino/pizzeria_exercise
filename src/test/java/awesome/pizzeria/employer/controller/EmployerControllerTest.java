@@ -1,7 +1,6 @@
-package awesome.pizzeria;
+package awesome.pizzeria.employer.controller;
 
-import awesome.pizzeria.employer.controller.EmployerController;
-import awesome.pizzeria.employer.controller.service.EmployerService;
+import awesome.pizzeria.employer.service.EmployerService;
 import awesome.pizzeria.employer.dto.OrderDTO;
 import awesome.pizzeria.status.OrderStatus;
 import awesome.pizzeria.status.Pizza;
