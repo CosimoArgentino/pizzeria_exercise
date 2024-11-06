@@ -1,4 +1,7 @@
-package awesome.pizzeria.pizzeria.model;
+package awesome.pizzeria.model;
+
+import awesome.pizzeria.status.OrderStatus;
+import awesome.pizzeria.status.Pizza;
 
 import java.time.Instant;
 import java.util.List;

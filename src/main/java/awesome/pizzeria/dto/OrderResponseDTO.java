@@ -1,6 +1,6 @@
-package awesome.pizzeria.pizzeria.customer.dto;
+package awesome.pizzeria.dto;
 
-import awesome.pizzeria.pizzeria.model.OrderStatus;
+import awesome.pizzeria.status.OrderStatus;
 
 public class OrderResponseDTO {
     private String orderId;

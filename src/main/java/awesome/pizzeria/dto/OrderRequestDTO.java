@@ -1,6 +1,6 @@
-package awesome.pizzeria.pizzeria.customer.dto;
+package awesome.pizzeria.dto;
 
-import awesome.pizzeria.pizzeria.model.Pizza;
+import awesome.pizzeria.status.Pizza;
 
 import java.util.List;
 

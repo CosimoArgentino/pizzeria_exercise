@@ -1,4 +1,4 @@
-package awesome.pizzeria.pizzeria;
+package awesome.pizzeria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

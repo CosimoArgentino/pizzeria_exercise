@@ -1,9 +1,9 @@
-package awesome.pizzeria.pizzeria.customer.service;
+package awesome.pizzeria.customer.service;
 
-import awesome.pizzeria.pizzeria.customer.dto.OrderRequestDTO;
-import awesome.pizzeria.pizzeria.customer.dto.OrderResponseDTO;
-import awesome.pizzeria.pizzeria.model.Order;
-import awesome.pizzeria.pizzeria.model.OrderStatus;
+import awesome.pizzeria.dto.OrderRequestDTO;
+import awesome.pizzeria.dto.OrderResponseDTO;
+import awesome.pizzeria.model.Order;
+import awesome.pizzeria.status.OrderStatus;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
