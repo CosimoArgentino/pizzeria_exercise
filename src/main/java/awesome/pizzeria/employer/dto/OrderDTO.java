@@ -7,12 +7,12 @@ import java.util.List;
 
 public class OrderDTO {
     private String orderId;
-    private List<Pizza> items;
+    private List<Pizza> pizzas;
     private OrderStatus orderStatus;
 
-    public OrderDTO(String orderId, List<Pizza> items, OrderStatus orderStatus) {
+    public OrderDTO(String orderId, List<Pizza> pizzas, OrderStatus orderStatus) {
         this.orderId = orderId;
-        this.items = items;
+        this.pizzas = pizzas;
         this.orderStatus = orderStatus;
     }
 
@@ -32,11 +32,11 @@ public class OrderDTO {
         this.orderStatus = orderStatus;
     }
 
-    public List<Pizza> getItems() {
-        return items;
+    public List<Pizza> getPizzas() {
+        return pizzas;
     }
 
-    public void setItems(List<Pizza> items) {
-        this.items = items;
+    public void setPizzas(List<Pizza> pizzas) {
+        this.pizzas = pizzas;
     }
 }
